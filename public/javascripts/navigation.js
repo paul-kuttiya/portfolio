@@ -1,41 +1,34 @@
 (function() {
   var Navigation = {
-    //fix to delegate
-    $projects: $('header a[data-nav="projects"]'),
-    $profile: $('header a[data-nav="profile"]'),
-    $profile_section: $('section#profile'),
-    $projects_section: $('section#projects'),
-    fade: 2400,
+    $projects: $('main ul'),
+    $profile: $('section#profile'),
     bindEvents: function() {
-      this.$projects.on('click', function(e) {
-        e.preventDefault();
+      $('nav').on('click', 'a', this.navigate.bind(this));
+    },
+    navigate: function(e) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
 
-        this.$profile_section.hide();
-        this.$projects_section.fadeIn(this.fade).off();
-      }.bind(this));
-      this.$profile.on('click', function(e) {
-        e.preventDefault();
+      var $t = $(e.target),
+          projects = $t.data('nav') === 'projects';
+      
+      $t.parent('nav a').off('click');
 
-        this.$projects_section.hide();
-        this.$profile_section.fadeIn(this.fade).off();
+      if (!projects) {
+        this.$projects.fadeOut('fast', function() {
+          this.$profile.fadeIn('fast');
+        }.bind(this));
+        return;
+      }
+
+      this.$profile.fadeOut('fast', function() {
+        this.$projects.fadeIn('fast');
       }.bind(this));
     },
     init: function() {
       this.bindEvents();
-      this.$profile_section.hide();
     },
   }
-
-  $('#test').on('click', function(e) {
-    e.preventDefault();
-    $.ajax({
-      url: $(e.target).attr('href'),
-      success: function(json) {
-        //inject html to template
-        //show hidden template
-      }
-    })
-  })
 
   Navigation.init();
 }());

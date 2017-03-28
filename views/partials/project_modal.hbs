@@ -1,0 +1,30 @@
+<div class="modal">
+  <div class="modal__inner">
+    <div class="modal_content">
+      <label class="modal__close" for="modal-{{id}}">X</label>
+      <img id="modal_cover" src={{image}} alt="project_img" />
+      <section>
+        <article>
+          <h4>Project:</h4>
+          <p>{{title}}</p>
+        </article>
+        <article>
+          <h4>Technologies:</h4>
+            <p>
+            {{#each tags}}
+              <span>{{this}}</span>
+            {{/each}}
+            </p>
+        </article>
+        <article>
+          <h4>Details:</h4>
+          <p>{{details}}</p>
+        </article>
+        <article>
+          <h4>Site &amp; code review:</h4>
+          <p>details for project</p>
+        </article>
+      </section>
+    </div>
+  </div>
+</div>

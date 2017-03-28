@@ -1,4 +1,76 @@
 @import "whitespace-reset.css";
+.modal-state {
+  display: none;
+}
+.modal-state:checked + .modal {
+  opacity: 1;
+  visibility: visible;
+}
+.modal-state:checked + .modal .modal__inner {
+  top: 0;
+}
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.9);
+  transition: opacity 0.5s ease;
+}
+.modal .modal__inner {
+  transition: top 0.5s ease;
+  position: absolute;
+  text-align: left;
+  top: -20%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  margin: auto;
+  overflow: auto;
+  background: #fff;
+  border-radius: 5px;
+  padding: 2em 1em;
+  height: 75%;
+  z-index: 1;
+}
+.modal .modal__inner .modal_content {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.modal .modal__inner .modal_content img {
+  float: left;
+  width: 50%;
+  margin: 0 30px 0 0;
+}
+.modal .modal__inner .modal_content section article {
+  margin: 0 0 15px 0;
+}
+.modal .modal__inner .modal_content section article h4,
+.modal .modal__inner .modal_content section article p {
+  display: inline-block;
+  padding: 2px 0;
+}
+.modal .modal__inner .modal_content section article h4 {
+  margin: 0 10px 0 0;
+}
+.modal .modal__inner .modal_content section article p {
+  width: 30%;
+  vertical-align: top;
+}
+.modal .modal__inner .modal__close {
+  font-size: 1.5em;
+  color: #000;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 24px;
+  font-weight: bold;
+}
 * {
   box-sizing: border-box;
 }
@@ -43,21 +115,30 @@ main {
   padding: 0 30px;
   box-sizing: border-box;
 }
-main section#projects {
-  margin: 0 auto;
+main section#profile {
+  display: none;
 }
 main ul {
   text-align: center;
-  padding: 20px;
 }
 main ul li {
-  padding: 5px;
+  padding: 0 5px;
   display: inline-block;
   text-align: center;
   width: 30%;
+  vertical-align: top;
 }
 main ul li img {
   display: block;
   width: 100%;
   margin: 0 0 10px 0;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+}
+@media screen and (max-width: 1025px) {
+  main ul li {
+    width: 100%;
+  }
 }

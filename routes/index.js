@@ -12,7 +12,7 @@ var projects = JSON.parse(projects_db).data;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express', projects: projects });
+  res.render('index', { title: 'Paul Kuttiya', projects: projects });
 });
 
 router.get('/projects/:id', function(req, res, next) {

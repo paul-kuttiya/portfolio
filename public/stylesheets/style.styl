@@ -1,4 +1,5 @@
 @import "whitespace-reset.css"
+@import "project_modal"
 
 *
   box-sizing border-box
@@ -36,17 +37,27 @@ main
   width 80%
   padding 0 30px
   box-sizing border-box
-  section#projects
-    margin 0 auto
+  section#profile
+    display none
   ul
-    text-align center  
-    padding 20px
+    text-align center
     li
-      padding 5px
+      padding 0 5px
       display inline-block
       text-align center
       width 30%
+      vertical-align top
       img
         display block
         width 100%
         margin 0 0 10px 0
+
+footer
+  position fixed
+  bottom 0
+
+@media screen and (max-width: 1025px) {
+  main ul li {
+    width: 100%;
+  }
+}

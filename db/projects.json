@@ -4,10 +4,17 @@
     {
       "id": 1,
       "title": "Todos",
-      "tags": ["a", "b", "c"] 
+      "image": "/images/Todo_Sinatra.png",
+      "details": "Todo created with BackboneJS, expressJS and NodeJS",
+      "tags": ["a", "b", "c"]
     },
     {
       "id": 2,
+      "title": "Music Apps",
+      "tags": ["a", "b", "c"] 
+    },
+    {
+      "id": 3,
       "title": "Music Apps",
       "tags": ["a", "b", "c"] 
     }

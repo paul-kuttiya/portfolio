@@ -1,9 +1,12 @@
 <ul>
   {{#each projects}}
   <li data-project_id="{{id}}">
-    <img src="http://placehold.it/300x200" alt="project_img">
-    <h3>{{title}}</h3>
-    <a href="#"></a>
+    <label for="modal-{{id}}">
+      <img src={{image}} alt="project_img">
+      <h3>{{title}}</h3>
+    </label>
+    <input class="modal-state" id="modal-{{id}}" type="checkbox" />
+    {{> project_modal}}
   </li>
   {{/each}}
 </ul>
