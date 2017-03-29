@@ -4,57 +4,76 @@
 *
   box-sizing border-box
 
-html
-  font normal 1em 'Lato', sans-serif
+body
+  position relative
+  min-height 100%
+  font normal 1em 'Roboto', sans-serif;
   color: black
+  background: #BE93C5; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #BE93C5 , #7BC6CC); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #BE93C5 , #7BC6CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   a
     text-decoration none
-  h3
+    color #000
+    &:hover
+      color red
+  h2
     font-size 1.5em
+  h3
+    font-size 1.25em
     
 header
-  margin 0 auto
-  text-align center
-  h3
-    display block
-    padding 15px
-    color red
+  background-color #fff
+  box-shadow 0px 1px 2px 2px rgba(136,136,136,0.3)
+  font-size 1.25em
+  height 80px
+  #author
+    float left
+    width 50%
+    margin 1em
+    li
+      display inline
   nav
-    padding 20px
-    a
-      text-transform uppercase
-      font-size 1.5em
-      display inline-block
-      cursor pointer
-      &:focus
-        color red
+    float right
+    margin 1em 1em 0 0
   span
-    font-size 2em
     padding 0 0.5em
 
 main
-  margin 0 auto
+  margin 50px auto
   width 80%
   padding 0 30px
   box-sizing border-box
+  min-height 100%
   section#profile
     display none
   ul
+    margin 10px 0 0 0
     text-align center
     li
-      padding 0 5px
+      padding 10px
+      margin 0 10px 20px 10px
       display inline-block
       text-align center
       width 30%
       vertical-align top
-      img
+      .cover
         display block
         width 100%
         margin 0 0 10px 0
+        box-shadow 0px 0px 10px 5px rgba(136, 136, 136, 0.65)
+        transition all .2s ease-in-out
+        &:hover
+          -webkit-filter brightness(50%)
+          transform scale(0.90)
+          box-shadow none
 
 footer
-  position fixed
+  position absolute
+  right 0
   bottom 0
+  left 0
+  text-align center
 
 @media screen and (max-width: 1025px) {
   main ul li {

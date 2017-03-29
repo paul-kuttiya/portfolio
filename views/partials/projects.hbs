@@ -2,11 +2,11 @@
   {{#each projects}}
   <li data-project_id="{{id}}">
     <label for="modal-{{id}}">
-      <img src={{image}} alt="project_img">
-      <h3>{{title}}</h3>
+    <img class="cover" src={{image}} alt="project_img">
     </label>
     <input class="modal-state" id="modal-{{id}}" type="checkbox" />
     {{> project_modal}}
+    <h3>{{title}}</h3>
   </li>
   {{/each}}
 </ul>
