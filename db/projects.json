@@ -3,9 +3,9 @@
   "data": [
     {
       "id": 1,
-      "title": "Todos",
+      "title": "Todos Ruby",
       "image": "/images/Todo_Sinatra.png",
-      "details": "Todo created with BackboneJS, expressJS and NodeJS",
+      "details": "Todo created with Ruby and Sinatra",
       "tags": ["Ruby", "Sinatra", "Javascript", "Jquery"]
     },
     {

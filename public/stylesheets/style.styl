@@ -10,10 +10,12 @@ body
   bg()
   position relative
   font normal 1em 'Roboto', sans-serif;
+  font-family: 'Indie Flower', cursive;
   color: colors.white
   a
     text-decoration none
     color: colors.white
+    text-transform uppercase
     &:hover
       color: colors.hover
   h2
@@ -46,9 +48,9 @@ body
 main
   width 100%
   height 100%
-  margin 50px auto
+  margin 30px auto
   width 80%
-  padding 0 30px
+  padding 0 20px
   box-sizing border-box
   ul
     margin 10px 0 0 0
@@ -70,6 +72,7 @@ main
           -webkit-filter brightness(50%)
           transform scale(0.90)
           box-shadow none
+          cursor pointer
 
 span.icon
   margin 0 5px 0 0
@@ -81,8 +84,58 @@ span.icon
     width auto
     height 36px
 
-@media screen and (max-width: 1025px) {
-  main ul li {
-    width: 100%;
-  }
-}
+@media (max-width: 770px)
+  body
+    font-size 12px
+  main
+    margin 0 auto
+    padding 0
+    ul
+      li
+        width 60%
+  .modal
+    .modal__inner
+      height 80%
+      .modal_content
+        text-align center
+        #modal_cover
+          margin 0 0 10px 0
+          float none
+          width 80%
+        section
+          article
+            h4
+              display block
+              padding 5px
+              margin 0
+            p
+              width 80%
+  span.icon
+    width 18px
+    height 18px
+    img
+      height 18px
+  section#profile
+    width 100%
+    figure
+      padding 10px 0
+      max-height 400px
+      section
+        max-width 100%
+        padding 10px
+        article
+          padding 0 0 10px 0
+          margin 0
+          h4
+            display inline-block
+            margin 0
+      #info
+        a:last-of-type
+          margin 0
+        padding 10px
+        margin 0
+        img
+          height 125px
+          padding 0 0 5px 0
+          + h4
+            display none
