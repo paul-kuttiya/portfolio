@@ -1,0 +1,9 @@
+{
+ "language": ["Ruby", "Javascript", "Html5", "CSS3"],
+ "template": ["Pug", "Handlebars"],
+ "library": ["Ajax", "Jquery", "Lodash", "Underscore"],
+ "platform": ["node", "Linux", "Git", "Heroku"],
+ "database": ["Postgresql"],
+ "frameworks": ["Sinatra","Backbone","Express"],
+ "tools": ["Bower", "Grunt", "Stylus"]
+}

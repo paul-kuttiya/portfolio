@@ -1,9 +1,58 @@
-<h1>Paul Kuttiya</h1>
-<p>
-  Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-  when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-  It has survived not only five centuries, but also the leap into electronic typesetting, 
-  remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-  and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-</p>
+<figure>
+  <div id="info">
+    <img src="/images/profile.png" alt="profile" title="paul kuttiya" />
+    <h4>Download</h4>
+    <a href="/images/myw3schoolsimage.jpg" download>
+      <i class="fa fa-file-text-o" aria-hidden="true"></i>
+      Resume
+    </a>
+    <a href="/images/myw3schoolsimage.jpg" download>
+      <i class="fa fa-file-text-o" aria-hidden="true"></i>
+      Cover Letter
+    </a>
+  </div>
+  <section>
+    <article>
+      <h4>Language: </h4>
+      {{#each profile.language}}
+        <span class="icon">{{{tag this}}}</span>
+      {{/each}}
+    </article>
+    <article>
+      <h4>Template: </h4>
+      {{#each profile.template}}
+        <span class="icon">{{{tag this}}}</span>
+      {{/each}}
+    </article>
+    <article>
+      <h4>Library: </h4>
+      {{#each profile.library}}
+        <span class="icon">{{{tag this}}}</span>
+      {{/each}}
+    </article>
+    <article>
+      <h4>Platform: </h4>
+      {{#each profile.platform}}
+        <span class="icon">{{{tag this}}}</span>
+      {{/each}}
+    </article>
+    <article>
+      <h4>Database: </h4>
+      {{#each profile.database}}
+        <span class="icon">{{{tag this}}}</span>
+      {{/each}}
+    </article>
+    <article>
+      <h4>Frameworks: </h4>
+      {{#each profile.frameworks}}
+        <span class="icon">{{{tag this}}}</span>
+      {{/each}}
+    </article>
+    <article>
+      <h4>Tools: </h4>
+      {{#each profile.tools}}
+        <span class="icon">{{{tag this}}}</span>
+      {{/each}}
+    <article>
+  </section>
+</figure>

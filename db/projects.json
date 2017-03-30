@@ -6,7 +6,7 @@
       "title": "Todos",
       "image": "/images/Todo_Sinatra.png",
       "details": "Todo created with BackboneJS, expressJS and NodeJS",
-      "tags": ["a", "b", "c"]
+      "tags": ["Ruby", "Sinatra", "Javascript", "Jquery"]
     },
     {
       "id": 2,
