@@ -48,6 +48,7 @@
 .modal .modal__inner .modal_content > img {
   float: left;
   width: 50%;
+  height: 250px;
   margin: 0 30px 0 0;
   box-shadow: 0px 0px 10px 5px rgba(136,136,136,0.3);
 }
@@ -65,6 +66,12 @@
 .modal .modal__inner .modal_content section article p {
   width: 30%;
   vertical-align: top;
+}
+.modal .modal__inner .modal_content section article a {
+  color: #001f3f;
+}
+.modal .modal__inner .modal_content section article a:hover {
+  color: #66b6c7;
 }
 .modal .modal__inner .modal__close {
   font-size: 1.5em;
@@ -180,6 +187,9 @@ body header + span {
   background: -webkit-linear-gradient(to left, #ece9e6, #fff); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #ece9e6, #fff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+body header i {
+  width: 20px;
+}
 body header #author {
   padding: 15px 0;
   margin: 0 0 0.5em 0;
@@ -226,7 +236,7 @@ main ul li {
 }
 main ul li .cover {
   width: 100%;
-  height: 100%;
+  height: 200px;
   position: relative;
   box-shadow: 1px 1px 40px 0 rgba(0,0,0,0.45);
   transition: all 0.2s ease-in-out;
@@ -240,6 +250,7 @@ main ul li .cover:hover {
 main ul li .cover img {
   display: block;
   width: 100%;
+  height: 100%;
 }
 main ul li .cover span {
   font-size: 1em;
@@ -295,6 +306,7 @@ span.icon img {
     margin: 0 0 10px 0;
     float: none;
     width: 80%;
+    height: 250px;
   }
   .modal .modal__inner .modal_content section article h4 {
     display: block;
@@ -345,13 +357,18 @@ span.icon img {
     display: none;
   }
 }
+@media (max-width: 420px) {
+  .cover,
+  #modal_cover {
+    height: 125px !important;
+  }
+}
 @media (max-width: 377px) {
   body,
   a {
     font-size: 11px;
   }
-  body header h2,
-  a header h2 {
+  header h2 {
     font-size: 16px;
   }
 }

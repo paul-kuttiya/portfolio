@@ -6,24 +6,30 @@
       $('nav').on('click', 'a', this.navigate.bind(this));
     },
     navigate: function(e) {
-      e.preventDefault();
       e.stopImmediatePropagation();
 
       var $t = $(e.target),
-          projects = $t.data('nav') === 'projects';
+          projects = $t.data('nav') === 'projects',
+          profile = $t.data('nav') === 'profile';
       
       $t.parent('nav a').off('click');
 
-      if (!projects) {
+      if (profile) {
+        e.preventDefault();
         this.$projects.fadeOut('fast', function() {
           this.$profile.fadeIn('fast');
         }.bind(this));
         return;
+      } else if (projects) {
+        e.preventDefault();
+        console.log('project')
+        this.$profile.fadeOut('fast', function() {
+          this.$projects.fadeIn('fast');
+        }.bind(this));
+        return;
+      } else {
+        return;
       }
-
-      this.$profile.fadeOut('fast', function() {
-        this.$projects.fadeIn('fast');
-      }.bind(this));
     },
     init: function() {
       this.bindEvents();

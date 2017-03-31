@@ -4,21 +4,20 @@
     {
       "id": 1,
       "title": "Todos Ruby",
-      "image": "/images/Todo_Sinatra.png",
-      "details": "Todo created with Ruby and Sinatra",
-      "tags": ["Ruby", "Sinatra", "Javascript", "Jquery"]
+      "image": "/images/projects/todo_ruby.png",
+      "details": "Todo created with Ruby and Sinatra.",
+      "tags": ["Ruby", "Sinatra", "Javascript", "Jquery"],
+      "url": "https://p-kuttiya-todos.herokuapp.com/lists",
+      "github": "https://github.com/pookzzz2231/todos"
     },
     {
       "id": 2,
-      "title": "Music Apps",
-      "tags": ["a", "b", "c"],
-      "image": "/images/Todo_Sinatra.png"
-    },
-    {
-      "id": 3,
-      "title": "Music Apps",
-      "tags": ["a", "b", "c"],
-      "image": "/images/Todo_Sinatra.png"
+      "title": "Music Store",
+      "image": "/images/projects/music_store.png",
+      "details": "Ecommerce music store with BackboneJS",
+      "tags": ["Ruby", "Sinatra", "Javascript", "Jquery"],
+      "url": "https://p-kuttiya-music-store.herokuapp.com/",
+      "github": "https://github.com/pookzzz2231/music-store"
     }
   ]
 }
