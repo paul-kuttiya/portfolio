@@ -17,6 +17,7 @@
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 3;
   background: rgba(0,0,0,0.9);
   transition: opacity 0.35s ease;
 }
@@ -107,7 +108,7 @@ section#profile figure #info a {
   margin: 0 15px 0 0;
 }
 section#profile figure #info a:hover {
-  color: #fff;
+  color: #66b6c7;
 }
 section#profile figure section {
   text-align: left;
@@ -125,11 +126,12 @@ section#profile figure section article h4 {
 * {
   box-sizing: border-box;
 }
+html,
 body {
-  background: #457fca; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #457fca, #5691c8); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #457fca, #5691c8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  position: relative;
+  height: 100%;
+}
+body {
+  background: #0085a1;
   font: normal 1em 'Roboto', sans-serif;
   font-family: 'Raleway', sans-serif;
   color: #f5f5f5;
@@ -141,7 +143,7 @@ body a {
 }
 body a:hover,
 body a i:hover {
-  color: #fff;
+  color: #66b6c7;
 }
 body h2 {
   font-size: 2.75em;
@@ -162,9 +164,9 @@ body header h2,
 body header a,
 body header i,
 body header span {
-  background-image: #e52d27; /* fallback for old browsers */
-  background-image: -webkit-linear-gradient(to left, #e52d27, #b31217); /* Chrome 10-25, Safari 5.1-6 */
-  background-image: linear-gradient(to left, #e52d27, #b31217); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #ece9e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #ece9e6, #fff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #ece9e6, #fff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -174,9 +176,9 @@ body header + span {
   margin: 0 auto;
   width: 55%;
   height: 3px;
-  background-image: #e52d27; /* fallback for old browsers */
-  background-image: -webkit-linear-gradient(to left, #e52d27, #b31217); /* Chrome 10-25, Safari 5.1-6 */
-  background-image: linear-gradient(to left, #e52d27, #b31217); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #ece9e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #ece9e6, #fff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #ece9e6, #fff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 body header #author {
   padding: 15px 0;
@@ -188,8 +190,9 @@ body header #author h2 {
 }
 body header nav a,
 body header nav span {
-  font-size: 1.25em;
-  font-weight: bold;
+  font-size: 1em;
+  font-weight: 800;
+  letter-spacing: -1px;
 }
 body header nav a:last-of-type {
   margin: 0 0 0 5px;
@@ -199,10 +202,15 @@ body header span {
 }
 main {
   display: block;
-  margin: 20px auto;
+  margin: 20px auto -300px auto;
   width: 80%;
   padding: 0 20px;
-  box-sizing: border-box;
+  min-height: 100%;
+}
+main:after {
+  content: "";
+  display: block;
+  height: 300px;
 }
 main ul {
   margin: 10px 0 0 0;
@@ -217,10 +225,10 @@ main ul li {
   vertical-align: top;
 }
 main ul li .cover {
-  display: block;
   width: 100%;
-  margin: 0 0 15px 0;
-  box-shadow: 0px 0px 10px 5px rgba(204,204,204,0.65);
+  height: 100%;
+  position: relative;
+  box-shadow: 1px 1px 40px 0 rgba(0,0,0,0.45);
   transition: all 0.2s ease-in-out;
 }
 main ul li .cover:hover {
@@ -228,6 +236,28 @@ main ul li .cover:hover {
   transform: scale(0.9);
   box-shadow: none;
   cursor: pointer;
+}
+main ul li .cover img {
+  display: block;
+  width: 100%;
+}
+main ul li .cover span {
+  font-size: 1em;
+  letter-spacing: -1px;
+  display: block;
+  position: absolute;
+  background: #000 /* fallback color */;
+  font-weight: 800;
+  padding: 10px;
+  background: rgba(0,0,0,0.7);
+  bottom: 0;
+  border-top-right-radius: 1em;
+}
+footer {
+  background: url("/images/bg-city.png") center center no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 300px;
 }
 span.icon {
   margin: 0 5px 0 0;

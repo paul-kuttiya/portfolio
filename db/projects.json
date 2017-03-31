@@ -11,12 +11,14 @@
     {
       "id": 2,
       "title": "Music Apps",
-      "tags": ["a", "b", "c"] 
+      "tags": ["a", "b", "c"],
+      "image": "/images/Todo_Sinatra.png"
     },
     {
       "id": 3,
       "title": "Music Apps",
-      "tags": ["a", "b", "c"] 
+      "tags": ["a", "b", "c"],
+      "image": "/images/Todo_Sinatra.png"
     }
   ]
 }
