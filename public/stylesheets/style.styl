@@ -10,45 +10,53 @@ body
   bg()
   position relative
   font normal 1em 'Roboto', sans-serif;
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Raleway', sans-serif
   color: colors.white
   a
     text-decoration none
     color: colors.white
     text-transform uppercase
-    &:hover
+    &:hover, i:hover
       color: colors.hover
   h2
-    font-size 1.5em
+    font-size 2.75em
   h3
-    font-size 1.25em
+    font-size 1.5em
+    font-weight 100
   header
-    font-size 1.25em
-    height 80px
-    a
-      font-weight bold
+    padding 10px
+    width 80%
+    margin 0.5em auto 1.5em auto
+    text-transform uppercase
+    color: colors.white
+    text-align center
+    h2, a, i, span
+      text_bg()
+    + span
+      display block
+      margin 0 auto
+      width 55%
+      height 3px
+      text_bg_color()
     #author
-      float left
-      width 50%
-      margin 1em
-      h3
-        display inline
-        margin 0 10px 0 0
-      ul
-        display inline
-      li
-        display inline
-        margin 0 5px 0 0
+      padding 15px 0
+      margin 0 0 0.5em 0
+      h2
+        // text-indent 1em
+        font-weight 800
+        letter-spacing 0.3em
     nav
-      float right
-      margin 1em 1em 0 0
+      a, span
+        font-size 1.25em
+        font-weight bold
+      a:last-of-type
+        margin 0 0 0 5px
     span
       padding 0 0.5em
 
 main
-  width 100%
-  height 100%
-  margin 30px auto
+  display block
+  margin 20px auto
   width 80%
   padding 0 20px
   box-sizing border-box
@@ -56,16 +64,16 @@ main
     margin 10px 0 0 0
     text-align center
     li
-      padding 10px
-      margin 0 10px 20px 10px
+      padding 5px
+      margin 20px
       display inline-block
       text-align center
-      width 30%
+      width 40%
       vertical-align top
       .cover
         display block
         width 100%
-        margin 0 0 10px 0
+        margin 0 0 15px 0
         shadow_box()
         transition all .2s ease-in-out
         &:hover
@@ -86,7 +94,10 @@ span.icon
 
 @media (max-width: 770px)
   body
-    font-size 12px
+    font-size 1em
+    header #author h2
+      font-size 1.75em
+      letter-spacing 2px
   main
     margin 0 auto
     padding 0
@@ -139,3 +150,9 @@ span.icon
           padding 0 0 5px 0
           + h4
             display none
+
+@media (max-width: 377px)
+  body, a
+    font-size 11px
+    header h2
+      font-size 16px

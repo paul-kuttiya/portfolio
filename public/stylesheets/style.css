@@ -32,10 +32,10 @@
   width: 80%;
   margin: auto;
   overflow: auto;
-  background: #fff;
+  background: #f5f5f5;
   border-radius: 5px;
   padding: 2em 1em;
-  height: 60%;
+  height: 65%;
   z-index: 1;
 }
 .modal .modal__inner .modal_content {
@@ -82,6 +82,7 @@ section#profile {
 }
 section#profile figure {
   background: rgba(255,255,255,0.7);
+  margin: 15px 0 0 0;
   color: #001f3f;
   padding: 20px;
   text-align: center;
@@ -89,7 +90,7 @@ section#profile figure {
 }
 section#profile figure #info {
   display: inline-block;
-  margin: 0 50px 0 0;
+  margin: 0 auto 15px auto;
   vertical-align: top;
 }
 section#profile figure #info > img {
@@ -100,15 +101,13 @@ section#profile figure #info > img {
   margin: auto;
   border-radius: 100%;
 }
-section#profile figure #info h4 {
-  padding: 0 0 15px 0;
-}
 section#profile figure #info a {
+  font-weight: 800;
   color: #001f3f;
   margin: 0 15px 0 0;
 }
 section#profile figure #info a:hover {
-  color: #f00;
+  color: #fff;
 }
 section#profile figure section {
   text-align: left;
@@ -127,12 +126,12 @@ section#profile figure section article h4 {
   box-sizing: border-box;
 }
 body {
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("/images/bg.png") center center no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  background: #457fca; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #457fca, #5691c8); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #457fca, #5691c8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   position: relative;
   font: normal 1em 'Roboto', sans-serif;
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Raleway', sans-serif;
   color: #f5f5f5;
 }
 body a {
@@ -140,49 +139,67 @@ body a {
   color: #f5f5f5;
   text-transform: uppercase;
 }
-body a:hover {
-  color: #f00;
+body a:hover,
+body a i:hover {
+  color: #fff;
 }
 body h2 {
-  font-size: 1.5em;
+  font-size: 2.75em;
 }
 body h3 {
-  font-size: 1.25em;
+  font-size: 1.5em;
+  font-weight: 100;
 }
 body header {
-  font-size: 1.25em;
-  height: 80px;
+  padding: 10px;
+  width: 80%;
+  margin: 0.5em auto 1.5em auto;
+  text-transform: uppercase;
+  color: #f5f5f5;
+  text-align: center;
 }
-body header a {
-  font-weight: bold;
+body header h2,
+body header a,
+body header i,
+body header span {
+  background-image: #e52d27; /* fallback for old browsers */
+  background-image: -webkit-linear-gradient(to left, #e52d27, #b31217); /* Chrome 10-25, Safari 5.1-6 */
+  background-image: linear-gradient(to left, #e52d27, #b31217); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+body header + span {
+  display: block;
+  margin: 0 auto;
+  width: 55%;
+  height: 3px;
+  background-image: #e52d27; /* fallback for old browsers */
+  background-image: -webkit-linear-gradient(to left, #e52d27, #b31217); /* Chrome 10-25, Safari 5.1-6 */
+  background-image: linear-gradient(to left, #e52d27, #b31217); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 body header #author {
-  float: left;
-  width: 50%;
-  margin: 1em;
+  padding: 15px 0;
+  margin: 0 0 0.5em 0;
 }
-body header #author h3 {
-  display: inline;
-  margin: 0 10px 0 0;
+body header #author h2 {
+  font-weight: 800;
+  letter-spacing: 0.3em;
 }
-body header #author ul {
-  display: inline;
+body header nav a,
+body header nav span {
+  font-size: 1.25em;
+  font-weight: bold;
 }
-body header #author li {
-  display: inline;
-  margin: 0 5px 0 0;
-}
-body header nav {
-  float: right;
-  margin: 1em 1em 0 0;
+body header nav a:last-of-type {
+  margin: 0 0 0 5px;
 }
 body header span {
   padding: 0 0.5em;
 }
 main {
-  width: 100%;
-  height: 100%;
-  margin: 30px auto;
+  display: block;
+  margin: 20px auto;
   width: 80%;
   padding: 0 20px;
   box-sizing: border-box;
@@ -192,17 +209,17 @@ main ul {
   text-align: center;
 }
 main ul li {
-  padding: 10px;
-  margin: 0 10px 20px 10px;
+  padding: 5px;
+  margin: 20px;
   display: inline-block;
   text-align: center;
-  width: 30%;
+  width: 40%;
   vertical-align: top;
 }
 main ul li .cover {
   display: block;
   width: 100%;
-  margin: 0 0 10px 0;
+  margin: 0 0 15px 0;
   box-shadow: 0px 0px 10px 5px rgba(204,204,204,0.65);
   transition: all 0.2s ease-in-out;
 }
@@ -225,7 +242,11 @@ span.icon img {
 }
 @media (max-width: 770px) {
   body {
-    font-size: 12px;
+    font-size: 1em;
+  }
+  body header #author h2 {
+    font-size: 1.75em;
+    letter-spacing: 2px;
   }
   main {
     margin: 0 auto;
@@ -292,5 +313,15 @@ span.icon img {
   }
   section#profile figure #info img + h4 {
     display: none;
+  }
+}
+@media (max-width: 377px) {
+  body,
+  a {
+    font-size: 11px;
+  }
+  body header h2,
+  a header h2 {
+    font-size: 16px;
   }
 }

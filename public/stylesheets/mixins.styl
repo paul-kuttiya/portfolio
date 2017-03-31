@@ -1,16 +1,28 @@
 colors = {
   white: #f5f5f5,
+  header: OrangeRed,
   navy: #001F3F,
-  hover: red,
+  hover: #fff,
 }
 
 shadow_box()
   box-shadow 0px 0px 10px 5px rgba(204, 204, 204, 0.65)
 
 bg()
-  background linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/images/bg.png') center center no-repeat
-  background-size cover
-  background-attachment fixed
+  background: #457fca; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #457fca , #5691c8); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #457fca , #5691c8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+text_bg()
+  text_bg_color()
+  color transparent
+  -webkit-background-clip text
+  background-clip text
+
+text_bg_color()
+  background-image #e52d27; /* fallback for old browsers */
+  background-image -webkit-linear-gradient(to left, #e52d27 , #b31217); /* Chrome 10-25, Safari 5.1-6 */
+  background-image linear-gradient(to left, #e52d27 , #b31217); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 modal_bg()
   background rgba(255, 255, 255, 0.7)
