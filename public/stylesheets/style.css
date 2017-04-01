@@ -95,6 +95,7 @@ section#profile figure {
   padding: 20px;
   text-align: center;
   border-radius: 30px;
+  height: auto;
 }
 section#profile figure #info {
   display: inline-block;
@@ -271,15 +272,15 @@ footer {
   height: 300px;
 }
 span.icon {
-  margin: 0 5px 0 0;
-  width: 36px;
-  height: 36px;
+  margin: 5px;
+  width: 18px;
+  height: 18px;
   display: inline-block;
 }
 span.icon img {
   vertical-align: middle;
   width: auto;
-  height: 36px;
+  height: 18px;
 }
 @media (max-width: 770px) {
   body {
@@ -316,19 +317,11 @@ span.icon img {
   .modal .modal__inner .modal_content section article p {
     width: 80%;
   }
-  span.icon {
-    width: 18px;
-    height: 18px;
-  }
-  span.icon img {
-    height: 18px;
-  }
   section#profile {
     width: 100%;
   }
   section#profile figure {
     padding: 10px 0;
-    max-height: 400px;
   }
   section#profile figure section {
     max-width: 100%;

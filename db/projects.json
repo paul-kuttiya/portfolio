@@ -15,7 +15,7 @@
       "title": "Music Store",
       "image": "/images/projects/music_store.png",
       "details": "Ecommerce music store with BackboneJS",
-      "tags": ["Ruby", "Sinatra", "Javascript", "Jquery"],
+      "tags": ["Javascript", "backbone", "underscore" ,"grunt", "bower", "handlebars", "node", "express", "stylus"],
       "url": "https://p-kuttiya-music-store.herokuapp.com/",
       "github": "https://github.com/pookzzz2231/music-store"
     }
